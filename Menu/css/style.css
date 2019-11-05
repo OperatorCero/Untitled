@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+header {
+  height: 500px;
+  background: url("../image/colors.png") no-repeat top center;
+  background-size: cover;
+}
+.header-container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  min-height: 700px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content {
+  text-align: center;
+  flex-basis: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.header-content h2 {
+  font-size: 44px;
+  color: rgb(45, 81, 241);
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.header-content p {
+  color: rgb(45, 81, 241);
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.logo {
+  height: 31px;
+}
+.wrapper {
+  width: 160px;
+  position: relative;
+  text-align: center;
+  height: 40px;
+  font-family: "Arial";
+  line-height: 40px;
+}
+
+#menu-checkbox {
+  display: none;
+  margin-right: 5px;
+}
+.main-menu {
+  color: #000;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.main-menu a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  color: #000;
+  border-top: 2px solid #000;
+}
+label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burger-line {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 35px;
+  height: 2px;
+  background-color: #000;
+  transition: 0.5s all;
+}
+.second,
+.third {
+  top: 18px;
+}
+.fourth {
+  top: 28px;
+}
+#menu-checkbox:checked ~ .main-menu {
+  max-height: 500px;
+  font-size: 16px;
+}
+#menu-checkbox:checked ~ .first {
+  display: none;
+}
+#menu-checkbox:checked ~ .second {
+  transform: rotate(45deg);
+}
+#menu-checkbox:checked ~ .third {
+  transform: rotate(-45deg);
+}
+#menu-checkbox:checked ~ .fourth {
+  display: none;
+}
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  display: inline-block;
+  font-size: 22px;
+  padding: 10px 30px;
+  color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  background-color: rgb(99, 224, 15);
+  color: rgb(0, 0, 0);
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+}
+
+.header-button a:hover {
+  background: rgb(40, 44, 252);
+  color: rgb(255, 255, 255);
+}
+
+.main-container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+main {
+  width: 100%;
+}
+
+.item-card {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.item-card h3 {
+  margin: 15px 0;
+  font-size: 30px;
+}
+
+.item-card p {
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
+  line-height: 22px;
+}
